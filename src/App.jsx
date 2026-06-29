@@ -3769,60 +3769,52 @@ export default function App() {
               className="relative overflow-hidden rounded-[2.5rem] bg-gradient-hero p-6 text-white shadow-elegant sm:p-10 md:p-16"
             >
               <div className="bg-gradient-mesh absolute inset-0 opacity-60" />
-              <div className="absolute -bottom-20 -right-20 opacity-20 transition-transform hover:scale-105 duration-1000">
-                <svg viewBox="0 0 400 400" className="h-[500px] w-[500px] drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]" aria-hidden="true">
+              <div className="absolute -bottom-32 -right-32 opacity-40 mix-blend-screen transition-transform hover:scale-105 duration-1000">
+                <svg viewBox="0 0 400 400" className="h-[600px] w-[600px] drop-shadow-[0_0_50px_rgba(56,189,248,0.5)]" aria-hidden="true">
                   <defs>
-                    <linearGradient id="robot-grad" x1="0" y1="0" x2="1" y2="1">
+                    <linearGradient id="core-glow" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#38bdf8" />
-                      <stop offset="100%" stopColor="#0369a1" />
+                      <stop offset="50%" stopColor="#818cf8" />
+                      <stop offset="100%" stopColor="#3b82f6" />
                     </linearGradient>
-                    <linearGradient id="robot-dark" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#1e293b" />
-                      <stop offset="100%" stopColor="#0f172a" />
-                    </linearGradient>
-                    <linearGradient id="laser-grad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.6" />
-                      <stop offset="100%" stopColor="#38bdf8" stopOpacity="0" />
-                    </linearGradient>
+                    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+                      <stop offset="30%" stopColor="#38bdf8" stopOpacity="0.8" />
+                      <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0" />
+                    </radialGradient>
                   </defs>
                   
-                  {/* Base */}
-                  <path d="M110 380 L290 380 L260 320 L140 320 Z" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="2" />
-                  <rect x="140" y="310" width="120" height="10" fill="#38bdf8" />
-                  
-                  <g style={{ transformOrigin: '200px 310px', animation: 'robotBase 5s ease-in-out infinite alternate' }}>
-                    <circle cx="200" cy="310" r="35" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="3" />
-                    <circle cx="200" cy="310" r="15" fill="#38bdf8" />
+                  {/* Outer Tech Ring - Slowly spinning counter-clockwise */}
+                  <g style={{ transformOrigin: '200px 200px', animation: 'spin 20s linear infinite reverse' }}>
+                    <circle cx="200" cy="200" r="160" fill="none" stroke="url(#core-glow)" strokeWidth="4" strokeDasharray="10 20 50 20" opacity="0.6" />
+                    <circle cx="200" cy="200" r="170" fill="none" stroke="#38bdf8" strokeWidth="1" strokeDasharray="5 15" opacity="0.4" />
+                    {/* decorative nodes */}
+                    <circle cx="40" cy="200" r="6" fill="#38bdf8" />
+                    <circle cx="360" cy="200" r="6" fill="#38bdf8" />
+                    <circle cx="200" cy="40" r="6" fill="#38bdf8" />
+                    <circle cx="200" cy="360" r="6" fill="#38bdf8" />
+                  </g>
+
+                  {/* Middle Data Ring - Spinning clockwise */}
+                  <g style={{ transformOrigin: '200px 200px', animation: 'spin 12s linear infinite' }}>
+                    <circle cx="200" cy="200" r="120" fill="none" stroke="#60a5fa" strokeWidth="12" strokeDasharray="2 10 40 10 80 10" opacity="0.8" />
+                    <circle cx="200" cy="200" r="130" fill="none" stroke="#93c5fd" strokeWidth="2" strokeDasharray="4 8" opacity="0.5" />
+                  </g>
+
+                  {/* Inner Core Housing - Pulsating */}
+                  <g style={{ transformOrigin: '200px 200px', animation: 'pulse 3s ease-in-out infinite alternate' }}>
+                    <circle cx="200" cy="200" r="80" fill="none" stroke="url(#core-glow)" strokeWidth="8" />
+                    <circle cx="200" cy="200" r="90" fill="none" stroke="#38bdf8" strokeWidth="2" strokeDasharray="1 10" />
                     
-                    {/* Lower Arm */}
-                    <rect x="175" y="150" width="50" height="160" rx="25" fill="url(#robot-grad)" stroke="#fff" strokeWidth="1" opacity="0.9" />
-                    <line x1="200" y1="170" x2="200" y2="290" stroke="#fff" strokeWidth="4" strokeDasharray="10 10" opacity="0.5" />
+                    {/* The "Robot Eye" Center */}
+                    <circle cx="200" cy="200" r="40" fill="url(#center-glow)" />
+                    <circle cx="200" cy="200" r="60" fill="none" stroke="#fff" strokeWidth="1" opacity="0.5" />
                     
-                    <g style={{ transformOrigin: '200px 170px', animation: 'robotArm1 4s ease-in-out infinite alternate' }}>
-                      <circle cx="200" cy="170" r="28" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="3" />
-                      <circle cx="200" cy="170" r="10" fill="#38bdf8" />
-                      
-                      {/* Upper Arm */}
-                      <rect x="182" y="60" width="36" height="110" rx="18" fill="url(#robot-grad)" stroke="#fff" strokeWidth="1" opacity="0.9" />
-                      <line x1="200" y1="75" x2="200" y2="155" stroke="#fff" strokeWidth="4" strokeDasharray="8 8" opacity="0.5" />
-                      
-                      <g style={{ transformOrigin: '200px 75px', animation: 'robotArm2 3s ease-in-out infinite alternate' }}>
-                        <circle cx="200" cy="75" r="20" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="2" />
-                        
-                        {/* Head / Claw Base */}
-                        <path d="M180 75 L220 75 L230 40 L170 40 Z" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="2" />
-                        
-                        {/* Pincers */}
-                        <path d="M170 40 L160 10 L175 10 L180 40" fill="#38bdf8" />
-                        <path d="M230 40 L240 10 L225 10 L220 40" fill="#38bdf8" />
-                        
-                        {/* Energy Core */}
-                        <circle cx="200" cy="55" r="6" fill="#fff" className="animate-pulse" />
-                        
-                        {/* Laser / Scanner beam */}
-                        <polygon points="200,40 120,-80 280,-80" fill="url(#laser-grad)" style={{ animation: 'laserPulse 2.5s infinite alternate', transformOrigin: '200px 40px' }} />
-                      </g>
-                    </g>
+                    {/* Crosshairs */}
+                    <line x1="200" y1="110" x2="200" y2="130" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" />
+                    <line x1="200" y1="270" x2="200" y2="290" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" />
+                    <line x1="110" y1="200" x2="130" y2="200" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" />
+                    <line x1="270" y1="200" x2="290" y2="200" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" />
                   </g>
                 </svg>
               </div>
