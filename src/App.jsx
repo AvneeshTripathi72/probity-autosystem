@@ -3727,7 +3727,7 @@ export default function App() {
                       <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/20 via-primary-glow/20 to-primary/20 blur-md" />
                     </div>
                     <img
-                      src={`/company-logo/${logo}`}
+                      src={`/images/${logo}`}
                       alt={`Customer logo ${i + 1}`}
                       loading="lazy"
                       className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
