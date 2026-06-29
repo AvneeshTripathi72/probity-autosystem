@@ -1344,7 +1344,7 @@ export default function App() {
           <div className="mx-auto max-w-7xl relative z-10">
             <div className="grid items-center gap-16 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
               {/* Left: Original Hero content */}
-              <div className="relative">
+              <div className="relative flex flex-col h-full">
                 <div className="intro-badge">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
@@ -2632,7 +2632,7 @@ export default function App() {
               >
                 <div className="absolute inset-0 bg-gradient-teal opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl transition-all group-hover:bg-primary/40" />
-                <div className="relative">
+                <div className="relative flex flex-col h-full">
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-background/10 backdrop-blur transition-all duration-300 group-hover:bg-white/20">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2714,7 +2714,7 @@ export default function App() {
               >
                 <div className="absolute inset-0 bg-gradient-teal opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl transition-all group-hover:bg-primary/40" />
-                <div className="relative">
+                <div className="relative flex flex-col h-full">
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-background/10 backdrop-blur transition-all duration-300 group-hover:bg-white/20">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2790,7 +2790,7 @@ export default function App() {
               >
                 <div className="absolute inset-0 bg-gradient-teal opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl transition-all group-hover:bg-primary/40" />
-                <div className="relative">
+                <div className="relative flex flex-col h-full">
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-background/10 backdrop-blur transition-all duration-300 group-hover:bg-white/20">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -3069,7 +3069,7 @@ export default function App() {
                   icon: "M12 8V4H8 M4 8h16v12H4z M2 14h2 M20 14h2 M15 13v2 M9 13v2",
                 },
               ].map((group, i) => (
-                <div key={i} className="group rounded-3xl border border-white/10 bg-background/5 p-6 backdrop-blur transition-all duration-300 hover:border-primary-glow/50 hover:bg-background/10 sm:p-7">
+                <div key={i} className="group flex flex-col h-full rounded-3xl border border-white/10 bg-background/5 p-6 backdrop-blur transition-all duration-300 hover:border-primary-glow/50 hover:bg-background/10 sm:p-7">
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-teal shadow-glow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-foreground" aria-hidden="true"><path d={group.icon} /></svg>
                   </div>
@@ -3126,9 +3126,9 @@ export default function App() {
                   icon: "M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z M7 16.5l-4.74-2.85 M7 16.5 5-3 M7 16.5v5.17 M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z",
                 },
               ].map((card, i) => (
-                <div key={i} className="group relative cursor-default overflow-hidden rounded-3xl border border-border bg-secondary/30 p-6 shadow-card transition-all duration-300 hover:border-primary/50 hover:shadow-elegant sm:p-7">
+                <div key={i} className="group flex flex-col h-full relative cursor-default overflow-hidden rounded-3xl border border-border bg-secondary/30 p-6 shadow-card transition-all duration-300 hover:border-primary/50 hover:shadow-elegant sm:p-7">
                   <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition-all duration-500 group-hover:bg-primary/30" />
-                  <div className="relative">
+                  <div className="relative flex flex-col h-full">
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-teal shadow-glow">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-foreground" aria-hidden="true"><path d={card.icon} /></svg>
                     </div>
@@ -3190,9 +3190,9 @@ export default function App() {
                   icon: "M4 6h16v12H4z M4 12h16",
                 },
               ].map((conv, i) => (
-                <div key={i} className="group relative cursor-default overflow-hidden rounded-3xl border border-border bg-background p-6 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-elegant sm:p-7">
+                <div key={i} className="group flex flex-col h-full relative cursor-default overflow-hidden rounded-3xl border border-border bg-background p-6 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-elegant sm:p-7">
                   <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition-all duration-500 group-hover:bg-primary/30" />
-                  <div className="relative">
+                  <div className="relative flex flex-col h-full">
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-teal shadow-glow">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-foreground" aria-hidden="true"><path d={conv.icon} /></svg>
                     </div>
@@ -3237,14 +3237,14 @@ export default function App() {
                 <div key={i} className="group rounded-3xl border border-border bg-secondary/30 p-6 shadow-card transition-all duration-300 hover:border-primary/50 hover:shadow-elegant sm:p-7">
                   <div className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-primary">0{i + 1}</div>
                   <h3 className="mb-2 font-display text-lg font-bold transition-colors duration-300 group-hover:text-primary sm:text-xl">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>
             <div className="mt-8 rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 via-background to-background p-6 sm:p-8">
               <div className="mb-2 text-[10px] font-semibold uppercase tracking-widest text-primary">Why EV OEMs Choose Probity</div>
               <h3 className="mb-3 font-display text-xl font-bold sm:text-2xl">Full-pack assembly lines with integrated traceability, MES & inline EOL testing.</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">From cells to packs, our solutions are designed for high throughput, tight quality control and the unique safety demands of EV manufacturing.</p>
+              <p className="flex-1 text-sm leading-relaxed text-muted-foreground">From cells to packs, our solutions are designed for high throughput, tight quality control and the unique safety demands of EV manufacturing.</p>
             </div>
           </div>
         </section>
@@ -3291,7 +3291,7 @@ export default function App() {
                   </div>
                   <div className="mb-1 text-[10px] font-semibold uppercase tracking-widest text-primary">{w.full}</div>
                   <h3 className="mb-2 font-display text-xl font-bold transition-colors duration-300 group-hover:text-primary">{w.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{w.desc}</p>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{w.desc}</p>
                 </div>
               ))}
             </div>
@@ -3361,14 +3361,14 @@ export default function App() {
                 { title: "Vision Inspection Systems", desc: "Inline vision stations for part presence, dimension and defect inspection.", icon: "M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" },
                 { title: "Gluing & Spraying", desc: "Automated gluing, dispensing and spraying systems with recipe control.", icon: "M9 11l3-9 3 9M9 11h6M9 11v10M15 11v10" },
               ].map((spm, i) => (
-                <div key={i} className="group relative cursor-default overflow-hidden rounded-3xl border border-border bg-background p-6 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-elegant sm:p-7">
+                <div key={i} className="group flex flex-col h-full relative cursor-default overflow-hidden rounded-3xl border border-border bg-background p-6 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-elegant sm:p-7">
                   <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl transition-all duration-500 group-hover:bg-primary/30" />
-                  <div className="relative">
+                  <div className="relative flex flex-col h-full">
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-teal shadow-glow">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-foreground" aria-hidden="true"><path d={spm.icon} /></svg>
                     </div>
                     <h3 className="mb-2 font-display text-lg font-bold transition-colors duration-300 group-hover:text-primary sm:text-xl">{spm.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{spm.desc}</p>
+                    <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{spm.desc}</p>
                   </div>
                 </div>
               ))}
@@ -3398,7 +3398,7 @@ export default function App() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-foreground" aria-hidden="true"><path d={it.icon} /></svg>
                   </div>
                   <h3 className="mb-2 font-display text-lg font-bold transition-colors duration-300 group-hover:text-primary sm:text-xl">{it.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{it.desc}</p>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{it.desc}</p>
                 </div>
               ))}
             </div>
@@ -3424,7 +3424,7 @@ export default function App() {
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-teal text-2xl font-bold text-primary-foreground shadow-glow">{p.step}</div>
                   <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary" dangerouslySetInnerHTML={{ __html: p.sub }} />
                   <h3 className="mb-3 text-xl font-bold leading-tight group-hover:text-primary" dangerouslySetInnerHTML={{ __html: p.title }} />
-                  <p className="text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
                 </div>
               ))}
             </div>
@@ -3485,14 +3485,14 @@ export default function App() {
                 { title: "Quick Response Team", desc: "Dedicated service engineers for fast on-site response and uptime.", icon: "M13 2L3 14h9l-1 8 10-12h-9l1-8z" },
                 { title: "Experienced Engineers", desc: "A team of 50+ engineers with deep domain expertise across industries.", icon: "M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M22 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75" },
               ].map((item, i) => (
-                <div key={i} className="group relative cursor-default overflow-hidden rounded-3xl border border-border bg-background p-6 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-elegant sm:p-7">
+                <div key={i} className="group flex flex-col h-full relative cursor-default overflow-hidden rounded-3xl border border-border bg-background p-6 shadow-card transition-all duration-300 hover:border-primary/40 hover:shadow-elegant sm:p-7">
                   <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-3xl transition-all duration-500 group-hover:bg-primary/30" />
-                  <div className="relative">
+                  <div className="relative flex flex-col h-full">
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-teal shadow-glow">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary-foreground" aria-hidden="true"><path d={item.icon} /></svg>
                     </div>
                     <h3 className="mb-2 font-display text-lg font-bold transition-colors duration-300 group-hover:text-primary sm:text-xl">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                    <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -4529,3 +4529,4 @@ export default function App() {
     </>
   );
 }
+
