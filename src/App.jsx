@@ -3769,8 +3769,8 @@ export default function App() {
               className="relative overflow-hidden rounded-[2.5rem] bg-gradient-hero p-6 text-white shadow-elegant sm:p-10 md:p-16"
             >
               <div className="bg-gradient-mesh absolute inset-0 opacity-60" />
-              <div className="absolute -bottom-32 -right-32 opacity-40 mix-blend-screen transition-transform hover:scale-105 duration-1000">
-                <svg viewBox="0 0 400 400" className="h-[600px] w-[600px] drop-shadow-[0_0_50px_rgba(56,189,248,0.5)]" aria-hidden="true">
+              <div className="absolute -bottom-16 -right-16 z-0 pointer-events-none opacity-80 transition-transform hover:scale-105 duration-1000">
+                <svg viewBox="0 0 400 400" className="h-[450px] w-[450px] drop-shadow-[0_0_50px_rgba(56,189,248,0.5)]" aria-hidden="true">
                   <defs>
                     <linearGradient id="core-glow" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#38bdf8" />
@@ -3785,9 +3785,9 @@ export default function App() {
                   </defs>
                   
                   {/* Outer Tech Ring - Slowly spinning counter-clockwise */}
-                  <g style={{ transformOrigin: '200px 200px', animation: 'spin 20s linear infinite reverse' }}>
-                    <circle cx="200" cy="200" r="160" fill="none" stroke="url(#core-glow)" strokeWidth="4" strokeDasharray="10 20 50 20" opacity="0.6" />
-                    <circle cx="200" cy="200" r="170" fill="none" stroke="#38bdf8" strokeWidth="1" strokeDasharray="5 15" opacity="0.4" />
+                  <g style={{ transformOrigin: '200px 200px', animation: 'coreSpinReverse 20s linear infinite' }}>
+                    <circle cx="200" cy="200" r="160" fill="none" stroke="url(#core-glow)" strokeWidth="4" strokeDasharray="10 20 50 20" opacity="0.8" />
+                    <circle cx="200" cy="200" r="170" fill="none" stroke="#38bdf8" strokeWidth="1" strokeDasharray="5 15" opacity="0.6" />
                     {/* decorative nodes */}
                     <circle cx="40" cy="200" r="6" fill="#38bdf8" />
                     <circle cx="360" cy="200" r="6" fill="#38bdf8" />
@@ -3796,9 +3796,9 @@ export default function App() {
                   </g>
 
                   {/* Middle Data Ring - Spinning clockwise */}
-                  <g style={{ transformOrigin: '200px 200px', animation: 'spin 12s linear infinite' }}>
-                    <circle cx="200" cy="200" r="120" fill="none" stroke="#60a5fa" strokeWidth="12" strokeDasharray="2 10 40 10 80 10" opacity="0.8" />
-                    <circle cx="200" cy="200" r="130" fill="none" stroke="#93c5fd" strokeWidth="2" strokeDasharray="4 8" opacity="0.5" />
+                  <g style={{ transformOrigin: '200px 200px', animation: 'coreSpin 12s linear infinite' }}>
+                    <circle cx="200" cy="200" r="120" fill="none" stroke="#60a5fa" strokeWidth="12" strokeDasharray="2 10 40 10 80 10" opacity="0.9" />
+                    <circle cx="200" cy="200" r="130" fill="none" stroke="#93c5fd" strokeWidth="2" strokeDasharray="4 8" opacity="0.7" />
                   </g>
 
                   {/* Inner Core Housing - Pulsating */}
