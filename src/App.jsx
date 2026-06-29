@@ -3769,34 +3769,61 @@ export default function App() {
               className="relative overflow-hidden rounded-[2.5rem] bg-gradient-hero p-6 text-white shadow-elegant sm:p-10 md:p-16"
             >
               <div className="bg-gradient-mesh absolute inset-0 opacity-60" />
-              <div className="absolute -bottom-20 -right-20 opacity-10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={24}
-                  height={24}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="0.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-cog h-96 w-96 animate-spin-slow"
-                  aria-hidden="true"
-                >
-                  <path d="M11 10.27 7 3.34" />
-                  <path d="m11 13.73-4 6.93" />
-                  <path d="M12 22v-2" />
-                  <path d="M12 2v2" />
-                  <path d="M14 12h8" />
-                  <path d="m17 20.66-1-1.73" />
-                  <path d="m17 3.34-1 1.73" />
-                  <path d="M2 12h2" />
-                  <path d="m20.66 17-1.73-1" />
-                  <path d="m20.66 7-1.73 1" />
-                  <path d="m3.34 17 1.73-1" />
-                  <path d="m3.34 7 1.73 1" />
-                  <circle cx={12} cy={12} r={2} />
-                  <circle cx={12} cy={12} r={8} />
+              <div className="absolute -bottom-20 -right-20 opacity-20 transition-transform hover:scale-105 duration-1000">
+                <svg viewBox="0 0 400 400" className="h-[500px] w-[500px] drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="robot-grad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#38bdf8" />
+                      <stop offset="100%" stopColor="#0369a1" />
+                    </linearGradient>
+                    <linearGradient id="robot-dark" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#1e293b" />
+                      <stop offset="100%" stopColor="#0f172a" />
+                    </linearGradient>
+                    <linearGradient id="laser-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.6" />
+                      <stop offset="100%" stopColor="#38bdf8" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                  
+                  {/* Base */}
+                  <path d="M110 380 L290 380 L260 320 L140 320 Z" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="2" />
+                  <rect x="140" y="310" width="120" height="10" fill="#38bdf8" />
+                  
+                  <g style={{ transformOrigin: '200px 310px', animation: 'robotBase 5s ease-in-out infinite alternate' }}>
+                    <circle cx="200" cy="310" r="35" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="3" />
+                    <circle cx="200" cy="310" r="15" fill="#38bdf8" />
+                    
+                    {/* Lower Arm */}
+                    <rect x="175" y="150" width="50" height="160" rx="25" fill="url(#robot-grad)" stroke="#fff" strokeWidth="1" opacity="0.9" />
+                    <line x1="200" y1="170" x2="200" y2="290" stroke="#fff" strokeWidth="4" strokeDasharray="10 10" opacity="0.5" />
+                    
+                    <g style={{ transformOrigin: '200px 170px', animation: 'robotArm1 4s ease-in-out infinite alternate' }}>
+                      <circle cx="200" cy="170" r="28" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="3" />
+                      <circle cx="200" cy="170" r="10" fill="#38bdf8" />
+                      
+                      {/* Upper Arm */}
+                      <rect x="182" y="60" width="36" height="110" rx="18" fill="url(#robot-grad)" stroke="#fff" strokeWidth="1" opacity="0.9" />
+                      <line x1="200" y1="75" x2="200" y2="155" stroke="#fff" strokeWidth="4" strokeDasharray="8 8" opacity="0.5" />
+                      
+                      <g style={{ transformOrigin: '200px 75px', animation: 'robotArm2 3s ease-in-out infinite alternate' }}>
+                        <circle cx="200" cy="75" r="20" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="2" />
+                        
+                        {/* Head / Claw Base */}
+                        <path d="M180 75 L220 75 L230 40 L170 40 Z" fill="url(#robot-dark)" stroke="#38bdf8" strokeWidth="2" />
+                        
+                        {/* Pincers */}
+                        <path d="M170 40 L160 10 L175 10 L180 40" fill="#38bdf8" />
+                        <path d="M230 40 L240 10 L225 10 L220 40" fill="#38bdf8" />
+                        
+                        {/* Energy Core */}
+                        <circle cx="200" cy="55" r="6" fill="#fff" className="animate-pulse" />
+                        
+                        {/* Laser / Scanner beam */}
+                        <polygon points="200,40 120,-80 280,-80" fill="url(#laser-grad)" style={{ animation: 'laserPulse 2.5s infinite alternate', transformOrigin: '200px 40px' }} />
+                      </g>
+                    </g>
+                  </g>
                 </svg>
               </div>
               <div className="relative grid gap-12 lg:grid-cols-2">
@@ -3834,16 +3861,7 @@ export default function App() {
                       <path d="m12 5 7 7-7 7" />
                     </svg>
                   </a>
-                  <div className="mt-12 hidden lg:flex justify-start">
-                    <video 
-                      src="/videos/live-chatbot.webm" 
-                      autoPlay 
-                      loop 
-                      muted 
-                      playsInline 
-                      className="h-64 w-64 object-contain opacity-90 drop-shadow-[0_0_15px_oklch(0.68_0.11_215)]"
-                    />
-                  </div>
+
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div
