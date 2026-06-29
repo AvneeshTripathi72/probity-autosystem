@@ -576,62 +576,50 @@ export default function App() {
     <>
       <main className="overflow-x-hidden bg-background text-foreground pb-32 md:pb-0">
         <header
-          className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/70 backdrop-blur-xl"
+          className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl rounded-full border border-white/20 bg-background/60 shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-xl transition-all duration-500 hover:bg-background/80 md:top-6"
           style={{ opacity: 1, transform: "none" }}
         >
-          <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-            <a href="#top" className="group flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg">
+          <div className="flex h-16 items-center justify-between px-6 sm:px-8">
+            <a href="#top" className="group flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm transition-transform duration-300 group-hover:scale-105 group-hover:shadow-glow">
                 <img
                   src="/images/logo.jpeg"
                   alt="Probity Autosystem Pvt Ltd Logo"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain p-0.5"
                 />
               </div>
-              <div className="leading-tight flex-1 min-w-0">
-                <div className="font-display text-sm md:text-base font-bold transition-colors duration-300 group-hover:text-primary truncate max-w-[200px] sm:max-w-none">
+              <div className="flex-1 min-w-0 leading-tight">
+                <div className="font-display text-sm font-bold transition-colors duration-300 group-hover:text-primary md:text-base">
                   Probity Autosystem Pvt Ltd
                 </div>
-                <div className="text-[8px] sm:text-[10px] uppercase tracking-widest text-muted-foreground truncate max-w-[200px] sm:max-w-none">
-                  Engineering Everything
+                <div className="text-[10px] font-semibold tracking-widest text-primary-glow">
+                  ENGINEERING EVERYTHING
                 </div>
               </div>
             </a>
-            <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
-              <a
-                href="#about"
-                className="relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:text-primary hover:after:w-full hover-glow"
-              >
-                About
-              </a>
-              <a
-                href="#vision"
-                className="relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:text-primary hover:after:w-full hover-glow"
-              >
-                Vision
-              </a>
-              <a
-                href="#products"
-                className="relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:text-primary hover:after:w-full hover-glow"
-              >
-                Solutions
-              </a>
-              <a
-                href="#industries"
-                className="relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:text-primary hover:after:w-full hover-glow"
-              >
-                Industries
-              </a>
-              <a
-                href="#contact"
-                className="relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:text-primary hover:after:w-full hover-glow"
-              >
-                Contact
-              </a>
+            
+            <nav className="hidden items-center gap-1 text-sm font-bold md:flex">
+              {[
+                { name: 'About', href: '#about' },
+                { name: 'Vision', href: '#vision' },
+                { name: 'Solutions', href: '#products' },
+                { name: 'Industries', href: '#industries' },
+                { name: 'Contact', href: '#contact' }
+              ].map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="group relative px-4 py-2 text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <span className="relative z-10">{link.name}</span>
+                  <span className="absolute inset-0 -z-10 scale-75 rounded-full bg-primary/10 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100" />
+                </a>
+              ))}
             </nav>
+
             <a
               href="#contact"
-              className="hidden items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-all duration-300 hover:bg-primary hover-lift hover-glow md:inline-flex"
+              className="group hidden items-center gap-2 rounded-full bg-foreground px-6 py-2.5 text-sm font-bold text-background transition-all duration-300 hover:scale-105 hover:bg-primary hover:shadow-[0_0_20px_oklch(50%_0.08_235/0.4)] md:inline-flex"
               tabIndex={0}
             >
               Get Quote
@@ -3721,17 +3709,17 @@ export default function App() {
                     style={{
                       animation: `fadeInUp 0.5s ease-out ${i * 0.03}s both`,
                     }}
-                    className="group relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-2 shadow-[0_4px_18px_rgba(0,0,0,0.2)] transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_10px_25px_rgba(56,189,248,0.25)] sm:p-3 lg:p-4"
+                    className="group relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-border bg-white p-4 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-xl"
                   >
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white via-white to-slate-100" />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent to-slate-50/50" />
                     <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/20 via-primary-glow/20 to-primary/20 blur-md" />
+                      <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/10 via-primary-glow/10 to-primary/10 blur-xl" />
                     </div>
                     <img
-                      src={`/images/${logo}`}
+                      src={`https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/images/${logo}`}
                       alt={`Customer logo ${i + 1}`}
+                      className="relative z-10 max-h-full max-w-full object-contain mix-blend-multiply p-1 transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
-                      className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                 ))}
