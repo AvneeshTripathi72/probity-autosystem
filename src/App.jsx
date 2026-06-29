@@ -251,31 +251,31 @@ const heroSlides = [
     heading: "MULTIMODEL SEAT ASSEMBLY LINE",
     subheading: "End To End Traceability",
     detail: "SBRS Testing",
-    image: "/product-videos/thumb_3.webp",
+    image: "/herosection/hero1.jpeg",
   },
   {
     heading: "ULTRASONIC WELDING CELL",
     subheading: "Robotic Application",
     detail: "Clamping Fixtures",
-    image: "/welding_cell.webp",
+    image: "/herosection/hero2.jpeg",
   },
   {
     heading: "ROBOTIC PALLETIZING SYSTEM",
     subheading: "Material Handling",
     detail: "Automated Stacking & Dispatch",
-    image: "/palletizer.webp",
+    image: "/herosection/hero3.jpeg",
   },
   {
     heading: "ROBOTIC PICK & PLACE CELL",
     subheading: "Machine Tending",
     detail: "High-Speed Component Handling",
-    image: "/image1.webp",
+    image: "/herosection/hero4.jpeg",
   },
   {
     heading: "AUTOMATED CONVEYOR SORTING LINE",
     subheading: "Material Handling & Gantry",
     detail: "High Performance Routing",
-    image: "/conveyor_robot.webp",
+    image: "/herosection/hero1.jpeg",
   },
 ];
 
