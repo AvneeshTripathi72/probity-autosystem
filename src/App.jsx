@@ -3449,14 +3449,15 @@ export default function App() {
                 { title: "Control Panel Assembly", desc: "In-house PLC panel design, wiring & programming for complete automation control and smart integration.", icon: "M5 12h14M12 5v14" },
                 { title: "Smart Storage System", desc: "Organized inventory management for tools & standard components ensuring zero downtime on the shop floor.", icon: "M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" },
               ].map((item, i) => (
-                <div key={i} className="group cursor-default rounded-2xl border border-white/10 bg-background/5 p-6 backdrop-blur transition-all duration-300 hover:border-primary-glow/50 hover:bg-background/10">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mb-4 h-8 w-8 text-primary-glow transition-all duration-300 group-hover:drop-shadow-[0_0_10px_oklch(0.68_0.11_215)]" aria-hidden="true"><path d={item.icon} /></svg>
-                  <h3 className="mb-2 font-display text-lg font-bold transition-colors duration-300 group-hover:text-primary-glow" dangerouslySetInnerHTML={{ __html: item.title }} />
-                  <p className="text-sm text-background/60 transition-colors duration-300 group-hover:text-background/80" dangerouslySetInnerHTML={{ __html: item.desc }} />
+                <div key={i} className="group relative flex h-full flex-col cursor-default rounded-2xl border border-white/10 bg-background/5 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary-glow/50 hover:bg-background/10 hover:shadow-elegant overflow-hidden">
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mb-5 h-10 w-10 text-primary-glow transition-all duration-300 group-hover:drop-shadow-[0_0_12px_oklch(0.68_0.11_215)]" aria-hidden="true"><path d={item.icon} /></svg>
+                  <h3 className="mb-3 font-display text-xl font-bold text-white transition-colors duration-300 group-hover:text-primary-glow" dangerouslySetInnerHTML={{ __html: item.title }} />
+                  <p className="flex-1 text-sm leading-relaxed text-background/60 transition-colors duration-300 group-hover:text-background/80" dangerouslySetInnerHTML={{ __html: item.desc }} />
                 </div>
               ))}
             </div>
-            <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur">
+            <div className="mt-16 rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur">
               <div className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary-glow">Workflow Advantage</div>
               <div className="font-display text-lg font-bold text-white">Fabrication → Machining → Assembly → Quality Check → Dispatch</div>
               <p className="mt-3 text-sm text-background/60">Strong infrastructure. Smarter execution. Reliable automation solutions built to scale your business.</p>
