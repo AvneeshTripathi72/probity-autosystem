@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
+const productVideoSlides = [
   {
     title: "Motor Assembly Line",
     category: "Assembly Line Automation",
