@@ -1,0 +1,10 @@
+[package]
+name = "nileshswami/probitysys"
+version = "0.1.4"
+description = "ProbitySys React SPA"
+
+[dependencies]
+"sharrattj/static-web-server" = "1"
+
+[fs]
+public = "dist"

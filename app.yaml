@@ -1,0 +1,16 @@
+name: probitysys
+app_id: da_RrWI0t5U8r41
+owner: nileshswami
+package: .
+domains:
+- probitysys.wasmer.app
+- probitysys-nileshswami.wasmer.app
+cli_args:
+- --host
+- 0.0.0.0
+- --page-fallback
+- ./public/index.html
+debug: true
+redirect:
+  force_https: true
+kind: wasmer.io/App.v0
