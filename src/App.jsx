@@ -2,6 +2,30 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 const productVideoSlides = [
   {
+    title: "New Project Video 1",
+    category: "Projects",
+    thumbnail: "/video/project_video_1.jpg",
+    videoUrl: "/video/project_video_1.mp4",
+  },
+  {
+    title: "New Project Video 2",
+    category: "Projects",
+    thumbnail: "/video/project_video_2.jpg",
+    videoUrl: "/video/project_video_2.mp4",
+  },
+  {
+    title: "New Project Video 3",
+    category: "Projects",
+    thumbnail: "/video/project_video_3.jpg",
+    videoUrl: "/video/project_video_3.mp4",
+  },
+  {
+    title: "New Project Video 4",
+    category: "Projects",
+    thumbnail: "/video/project_video_4.jpg",
+    videoUrl: "/video/project_video_4.mp4",
+  },
+  {
     title: "Assembly Line Automation with MES Software Integration",
     category: "Assembly Line Automation",
     thumbnail: "/product-videos/thumb_1.jpg",
@@ -284,15 +308,12 @@ function AnimatedCounter({ value }) {
   const suffix = value.replace(/[0-9]/g, '');
   const target = parseInt(numericString, 10);
 
-  if (isNaN(target)) {
-    return <span>{value}</span>;
-  }
-
   const [count, setCount] = useState(0);
   const elementRef = useRef(null);
   const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
+    if (isNaN(target)) return;
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -322,18 +343,19 @@ function AnimatedCounter({ value }) {
       { threshold: 0.1 }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const currentElement = elementRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, [target]);
 
-  return <span ref={elementRef}>{count}{suffix}</span>;
+  return <span ref={elementRef}>{isNaN(target) ? value : `${count}${suffix}`}</span>;
 }
 
 export default function App() {
@@ -632,38 +654,55 @@ export default function App() {
             </a>
             <button
               type="button"
-              aria-label="Open navigation menu"
+              aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(o => !o)}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background/85 text-foreground transition-colors duration-300 hover:border-primary hover:text-primary md:hidden"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-menu h-5 w-5"
-                aria-hidden="true"
-              >
-                <path d="M4 5h16" />
-                <path d="M4 12h16" />
-                <path d="M4 19h16" />
-              </svg>
+              {menuOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-x h-5 w-5"
+                >
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-menu h-5 w-5"
+                >
+                  <path d="M4 5h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 19h16" />
+                </svg>
+              )}
             </button>
           </div>
           <div
-            className="overflow-hidden border-t border-border/70 bg-background/95 md:hidden"
+            className="overflow-hidden border-t border-border bg-background md:hidden"
             style={{ height: menuOpen ? "auto" : 0, opacity: menuOpen ? 1 : 0, overflow: "hidden", transition: "opacity 0.3s ease" }}
           >
             <div className="space-y-2 px-4 py-4">
               <a
                 href="#about"
-                className="flex items-center justify-between rounded-2xl border border-border/80 bg-background/80 px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
+                className="flex items-center justify-between rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
               >
                 <span>About</span>
                 <svg
@@ -685,7 +724,7 @@ export default function App() {
               </a>
               <a
                 href="#vision"
-                className="flex items-center justify-between rounded-2xl border border-border/80 bg-background/80 px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
+                className="flex items-center justify-between rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
               >
                 <span>Vision</span>
                 <svg
@@ -707,7 +746,7 @@ export default function App() {
               </a>
               <a
                 href="#products"
-                className="flex items-center justify-between rounded-2xl border border-border/80 bg-background/80 px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
+                className="flex items-center justify-between rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
               >
                 <span>Products</span>
                 <svg
@@ -729,7 +768,7 @@ export default function App() {
               </a>
               <a
                 href="#contact"
-                className="flex items-center justify-between rounded-2xl border border-border/80 bg-background/80 px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
+                className="flex items-center justify-between rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary/40 hover:text-primary"
               >
                 <span>Contact</span>
                 <svg
@@ -3454,7 +3493,7 @@ export default function App() {
               <h2 className="text-3xl font-bold sm:text-4xl md:text-6xl">Our Manufacturing <span className="text-gradient">Ecosystem</span></h2>
               <p className="mx-auto mt-4 max-w-2xl text-background/60">Integrated Shop Floor Capabilities — built for precision, speed and reliability.</p>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
               {[
                 { title: "Assembly Unit", desc: "End-to-end assembly setup for precision build & seamless integration of components across all project types.", icon: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" },
                 { title: "Fabrication Division", desc: "Advanced welding & cutting capabilities including MIG, TIG & Arc processes for strong, durable structures.", icon: "M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5zM20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5zM3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14zM14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5zM15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5zM8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z" },
@@ -4011,7 +4050,7 @@ export default function App() {
                           <div className="text-[10px] font-semibold uppercase tracking-widest text-white/50 transition-all duration-300 group-hover/quick:text-primary-glow">
                             {qr.label}
                           </div>
-                          <div className="break-all text-xs font-semibold text-white/90 sm:text-sm">
+                          <div className="truncate text-xs font-semibold text-white/90 sm:text-sm" title={qr.value}>
                             {qr.value}
                           </div>
                         </div>
@@ -4028,35 +4067,8 @@ export default function App() {
         <footer className="border-t border-border bg-background px-6 py-10">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
             <div className="group flex cursor-default items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-teal">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={24}
-                  height={24}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-cog h-4 w-4 text-primary-foreground"
-                  aria-hidden="true"
-                >
-                  <path d="M11 10.27 7 3.34" />
-                  <path d="m11 13.73-4 6.93" />
-                  <path d="M12 22v-2" />
-                  <path d="M12 2v2" />
-                  <path d="M14 12h8" />
-                  <path d="m17 20.66-1-1.73" />
-                  <path d="m17 3.34-1 1.73" />
-                  <path d="M2 12h2" />
-                  <path d="m20.66 17-1.73-1" />
-                  <path d="m20.66 7-1.73 1" />
-                  <path d="m3.34 17 1.73-1" />
-                  <path d="m3.34 7 1.73 1" />
-                  <circle cx={12} cy={12} r={2} />
-                  <circle cx={12} cy={12} r={8} />
-                </svg>
+              <div className="flex h-7 w-7 items-center justify-center overflow-hidden">
+                <img src="/logo.jpeg" alt="Probity Autosystem Pvt Ltd" className="h-full w-full object-contain" />
               </div>
               <span className="transition-colors duration-300 group-hover:text-foreground">
                 © 2025 Probity Autosystem Pvt Ltd.
@@ -4535,23 +4547,23 @@ export default function App() {
         )}
         {/* Mobile Bottom Navigation Bar */}
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-          <div className="mx-4 mb-4 rounded-3xl border border-white/10 bg-black/60 p-2 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          <div className="mx-4 mb-4 rounded-3xl border border-border bg-background p-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
             <nav className="flex justify-between items-center w-full px-2 sm:px-6">
-              <a href="#top" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
+              <a href="#top" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                <span className="text-[10px] font-medium">Home</span>
+                <span className="text-[10px] font-bold">Home</span>
               </a>
-              <a href="#about" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
+              <a href="#about" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <span className="text-[10px] font-medium">About</span>
+                <span className="text-[10px] font-bold">About</span>
               </a>
-              <a href="#products" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
+              <a href="#products" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                <span className="text-[10px] font-medium">Solutions</span>
+                <span className="text-[10px] font-bold">Solutions</span>
               </a>
-              <a href="#contact" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
+              <a href="#contact" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <span className="text-[10px] font-medium">Contact</span>
+                <span className="text-[10px] font-bold">Contact</span>
               </a>
             </nav>
           </div>
