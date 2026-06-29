@@ -576,10 +576,10 @@ export default function App() {
     <>
       <main className="overflow-x-hidden bg-background text-foreground pb-32 md:pb-0">
         <header
-          className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl rounded-full border border-white/20 bg-background/60 shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-xl transition-all duration-500 hover:bg-background/80 md:top-6"
+          className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 shadow-sm backdrop-blur-xl transition-all duration-300"
           style={{ opacity: 1, transform: "none" }}
         >
-          <div className="flex h-16 items-center justify-between px-6 sm:px-8">
+          <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
             <a href="#top" className="group flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm transition-transform duration-300 group-hover:scale-105 group-hover:shadow-glow">
                 <img
@@ -598,7 +598,7 @@ export default function App() {
               </div>
             </a>
             
-            <nav className="hidden items-center gap-1 text-sm font-bold md:flex">
+            <nav className="hidden items-center gap-8 text-sm font-bold md:flex">
               {[
                 { name: 'About', href: '#about' },
                 { name: 'Vision', href: '#vision' },
@@ -609,31 +609,30 @@ export default function App() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="group relative px-4 py-2 text-muted-foreground transition-colors hover:text-foreground"
+                  className="relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:text-primary hover:after:w-full hover-glow"
                 >
-                  <span className="relative z-10">{link.name}</span>
-                  <span className="absolute inset-0 -z-10 scale-75 rounded-full bg-primary/10 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100" />
+                  {link.name}
                 </a>
               ))}
             </nav>
 
             <a
               href="#contact"
-              className="group hidden items-center gap-2 rounded-full bg-foreground px-6 py-2.5 text-sm font-bold text-background transition-all duration-300 hover:scale-105 hover:bg-primary hover:shadow-[0_0_20px_oklch(50%_0.08_235/0.4)] md:inline-flex"
+              className="group hidden items-center gap-2 rounded-full bg-foreground px-5 py-2 text-sm font-bold text-background transition-all duration-300 hover:scale-105 hover:bg-primary hover:shadow-[0_0_20px_oklch(50%_0.08_235/0.4)] md:inline-flex"
               tabIndex={0}
             >
               Get Quote
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
+                width={20}
+                height={20}
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-arrow-right h-4 w-4 transition-transform group-hover:translate-x-1"
+                className="transition-transform group-hover:translate-x-1"
                 aria-hidden="true"
               >
                 <path d="M5 12h14" />
