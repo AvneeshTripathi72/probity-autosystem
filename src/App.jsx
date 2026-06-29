@@ -4388,9 +4388,9 @@ export default function App() {
                           { name: "Bucket Elevator Conveyor", desc: "Designed for: Vertical lift of bulk solids, sand, grains, fertilizers." },
                           { name: "Overhead Conveyor", desc: "Designed for: Painting line interlinking, overhead storage, garments." }
                         ].map((c, i) => (
-                          <div key={i} className="rounded-2xl border border-white/10 p-4 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                          <div key={i} className="flex flex-col h-full rounded-2xl border border-white/10 p-4 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
                             <h5 className="font-bold text-sm mb-1" style={{ color: '#ffffff' }}>{c.name}</h5>
-                            <p className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{c.desc}</p>
+                            <p className="flex-1 text-xs" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{c.desc}</p>
                           </div>
                         ))}
                       </div>
@@ -4412,9 +4412,9 @@ export default function App() {
                           { name: "Timing Belt Conveyor", desc: "Designed for: Synchronized high-precision parts indexing." },
                           { name: "Vibratory Conveyor", desc: "Designed for: Bulk material sorting, dry foods, metal chips." }
                         ].map((c, i) => (
-                          <div key={i} className="rounded-2xl border border-white/10 p-4 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                          <div key={i} className="flex flex-col h-full rounded-2xl border border-white/10 p-4 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
                             <h5 className="font-bold text-sm mb-1" style={{ color: '#ffffff' }}>{c.name}</h5>
-                            <p className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{c.desc}</p>
+                            <p className="flex-1 text-xs" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{c.desc}</p>
                           </div>
                         ))}
                       </div>
@@ -4433,9 +4433,9 @@ export default function App() {
                           { name: "Gantry-Based Pick & Place", desc: "Overhead structure providing wide coverage and heavy load handling.", cap: "Large components, multi-station operations" },
                           { name: "Robotic Pick & Place", desc: "Advanced robotic system offering high speed, flexibility, and multi-axis movement.", cap: "High-speed automation, complex handling" }
                         ].map((p, i) => (
-                          <div key={i} className="rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                          <div key={i} className="flex flex-col h-full rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
                             <h5 className="font-bold text-base mb-1" style={{ color: '#ffffff' }}>{p.name}</h5>
-                            <p className="text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{p.desc}</p>
+                            <p className="flex-1 text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{p.desc}</p>
                             <div className="text-[10px] text-primary-glow font-bold tracking-wider">DESIGNED FOR: {p.cap.toUpperCase()}</div>
                           </div>
                         ))}
@@ -4451,9 +4451,9 @@ export default function App() {
                           { name: "SCARA Robot", desc: "Compact robot known for speed and precision in horizontal movements.", cap: "Assembly, electronics, small component handling" },
                           { name: "Gantry / Cartesian Robot", desc: "Linear motion robot offering high accuracy and load capacity.", cap: "CNC handling, heavy-duty automation" }
                         ].map((p, i) => (
-                          <div key={i} className="rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                          <div key={i} className="flex flex-col h-full rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
                             <h5 className="font-bold text-base mb-1" style={{ color: '#ffffff' }}>{p.name}</h5>
-                            <p className="text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{p.desc}</p>
+                            <p className="flex-1 text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{p.desc}</p>
                             <div className="text-[10px] text-primary-glow font-bold tracking-wider">DESIGNED FOR: {p.cap.toUpperCase()}</div>
                           </div>
                         ))}
@@ -4473,9 +4473,9 @@ export default function App() {
                           { name: "Defect Detection", desc: "Identifies surface and structural defects automatically.", cap: "Zero-defect manufacturing" },
                           { name: "AI-Based Inspection", desc: "Advanced system using AI for intelligent and adaptive inspection.", cap: "High-end automated quality systems" }
                         ].map((v, i) => (
-                          <div key={i} className="rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                          <div key={i} className="flex flex-col h-full rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
                             <h5 className="font-bold text-base mb-1" style={{ color: '#ffffff' }}>{v.name}</h5>
-                            <p className="text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{v.desc}</p>
+                            <p className="flex-1 text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{v.desc}</p>
                             <div className="text-[10px] text-primary-glow font-bold tracking-wider">DESIGNED FOR: {v.cap.toUpperCase()}</div>
                           </div>
                         ))}
@@ -4493,9 +4493,9 @@ export default function App() {
                           { name: "Indexing Assembly Line", desc: "Step-by-step high precision indexed movement ensuring perfect positioning.", cap: "Electronics, medical, small parts" },
                           { name: "Rotary Assembly System", desc: "Circular high-speed indexing designed for tight plant spaces.", cap: "High-volume component assembly" }
                         ].map((a, i) => (
-                          <div key={i} className="rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                          <div key={i} className="flex flex-col h-full rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-white/10" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
                             <h5 className="font-bold text-base mb-1" style={{ color: '#ffffff' }}>{a.name}</h5>
-                            <p className="text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{a.desc}</p>
+                            <p className="flex-1 text-xs mb-3" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{a.desc}</p>
                             <div className="text-[10px] text-primary-glow font-bold tracking-wider">DESIGNED FOR: {a.cap.toUpperCase()}</div>
                           </div>
                         ))}
