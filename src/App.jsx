@@ -552,7 +552,7 @@ export default function App() {
 
   return (
     <>
-      <main className="overflow-x-hidden bg-background text-foreground pb-24 md:pb-0">
+      <main className="overflow-x-hidden bg-background text-foreground pb-32 md:pb-0">
         <header
           className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/70 backdrop-blur-xl"
           style={{ opacity: 1, transform: "none" }}
@@ -566,11 +566,11 @@ export default function App() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <div className="leading-tight">
-                <div className="font-display text-base font-bold transition-colors duration-300 group-hover:text-primary">
+              <div className="leading-tight flex-1 min-w-0">
+                <div className="font-display text-sm md:text-base font-bold transition-colors duration-300 group-hover:text-primary truncate max-w-[200px] sm:max-w-none">
                   Probity Autosystem Pvt Ltd
                 </div>
-                <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                <div className="text-[8px] sm:text-[10px] uppercase tracking-widest text-muted-foreground truncate max-w-[200px] sm:max-w-none">
                   Engineering Everything
                 </div>
               </div>
@@ -848,7 +848,8 @@ export default function App() {
                   <h1 
                     style={{
                       fontFamily: 'Outfit, sans-serif',
-                      fontSize: 'clamp(1.75rem, 4.5vw, 3.75rem)',
+                      fontSize: isMobile ? '1.85rem' : 'clamp(2rem, 4.5vw, 3.75rem)',
+                      lineHeight: '1.1',
                       fontWeight: '900',
                       textTransform: 'uppercase',
                       letterSpacing: '-0.02em',
@@ -865,7 +866,8 @@ export default function App() {
                   <h2 
                     style={{
                       fontFamily: 'Outfit, sans-serif',
-                      fontSize: 'clamp(1.25rem, 3.2vw, 2.25rem)',
+                      fontSize: isMobile ? '1.2rem' : 'clamp(1.25rem, 3.2vw, 2.25rem)',
+                      lineHeight: '1.2',
                       fontWeight: '800',
                       color: '#ffffff',
                       marginTop: '0.75rem',
@@ -4533,21 +4535,21 @@ export default function App() {
         )}
         {/* Mobile Bottom Navigation Bar */}
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-          <div className="mx-4 mb-4 rounded-3xl border border-white/10 bg-background/80 p-2 backdrop-blur-xl shadow-lg">
-            <nav className="flex justify-around items-center">
-              <a href="#top" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
+          <div className="mx-4 mb-4 rounded-3xl border border-white/10 bg-black/60 p-2 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+            <nav className="flex justify-between items-center w-full px-2 sm:px-6">
+              <a href="#top" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                 <span className="text-[10px] font-medium">Home</span>
               </a>
-              <a href="#about" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
+              <a href="#about" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                 <span className="text-[10px] font-medium">About</span>
               </a>
-              <a href="#products" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
+              <a href="#products" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                 <span className="text-[10px] font-medium">Solutions</span>
               </a>
-              <a href="#contact" className="flex flex-col items-center gap-1 p-2 text-muted-foreground hover:text-primary transition-colors">
+              <a href="#contact" className="flex flex-col items-center gap-1 p-2 text-white/60 hover:text-primary transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                 <span className="text-[10px] font-medium">Contact</span>
               </a>
