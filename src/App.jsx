@@ -1,35 +1,34 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
-const productVideoSlides = [
   {
-    title: "New Project Video 1",
-    category: "Projects",
+    title: "Motor Assembly Line",
+    category: "Assembly Line Automation",
     thumbnail: "/video/project_video_1.jpg",
-    videoUrl: "/video/project_video_1.mp4",
+    videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_1.mp4",
   },
   {
-    title: "New Project Video 2",
-    category: "Projects",
+    title: "Fully automated Sound House Enclosure System",
+    category: "SPM",
     thumbnail: "/video/project_video_2.jpg",
-    videoUrl: "/video/project_video_2.mp4",
+    videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_2.mp4",
   },
   {
-    title: "New Project Video 3",
-    category: "Projects",
+    title: "Automated bearing press unit",
+    category: "Assembly Line Automation",
     thumbnail: "/video/project_video_3.jpg",
-    videoUrl: "/video/project_video_3.mp4",
+    videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_3.mp4",
   },
   {
-    title: "New Project Video 4",
-    category: "Projects",
+    title: "Automated bearing press unit (Fast)",
+    category: "Assembly Line Automation",
     thumbnail: "/video/project_video_4.jpg",
-    videoUrl: "/video/project_video_4.mp4",
+    videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_4.mp4",
   },
   {
     title: "Assembly Line Automation with MES Software Integration",
     category: "Assembly Line Automation",
     thumbnail: "/product-videos/thumb_1.jpg",
-    videoUrl: "/product-videos/video1.mp4",
+    videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/video1.mp4",
   },
   {
     title: "Friction Feeder (SPM)",
@@ -161,7 +160,7 @@ const productVideoSlides = [
     title: "Armrest Assembly Line",
     category: "Assembly Line Automation",
     thumbnail: "/product-videos/thumb_2.jpg",
-    videoUrl: "/product-videos/video2.mp4",
+    videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/video2.mp4",
   },
   {
     title: "J4U Headrest Assembly Line",
@@ -4087,73 +4086,72 @@ export default function App() {
         {/* ── Product Video Player Popup ── */}
         {activeVideoSlide && (
           <div
-            className="fixed inset-0 flex items-center justify-center p-4 sm:p-6 md:p-10"
+            className="fixed inset-0 flex items-center justify-center p-2 sm:p-6 md:p-10"
             style={{ zIndex: 99999 }}
           >
             <div
-              className="absolute inset-0"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.85)',
-                backdropFilter: 'blur(12px)',
-                WebkitBackdropFilter: 'blur(12px)',
-              }}
+              className="absolute inset-0 bg-background/90 backdrop-blur-xl transition-all duration-500"
               onClick={() => setActiveVideoSlide(null)}
             />
             <div
-              className="relative w-full overflow-hidden transition-all duration-300"
+              className="relative w-full overflow-hidden transition-all duration-500 shadow-2xl scale-100 opacity-100"
               style={{
                 zIndex: 99999,
-                maxWidth: '960px',
-                width: '95%',
+                maxWidth: '1024px',
+                width: '100%',
                 backgroundColor: '#0a0f1d',
                 color: '#ffffff',
-                borderRadius: '2rem',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(124, 247, 255, 0.1)',
+                borderRadius: '1.5rem',
+                border: '1px solid rgba(124, 247, 255, 0.2)',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 60px rgba(124, 247, 255, 0.15)',
               }}
             >
-              <div
-                className="flex items-start justify-between gap-4 border-b border-white/10"
-                style={{ padding: '20px 24px 16px 24px' }}
-              >
-                <div>
-                  {activeVideoSlide.category && (
-                    <div className="mb-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-primary-glow">
-                      {activeVideoSlide.category}
-                    </div>
-                  )}
-                  <h3 className="font-display text-lg font-bold text-white sm:text-2xl">
-                    {activeVideoSlide.title}
-                  </h3>
-                </div>
+              <div className="absolute top-0 right-0 z-50 p-4">
                 <button
                   type="button"
                   onClick={() => setActiveVideoSlide(null)}
-                  className="shrink-0 rounded-full bg-white/10 p-2.5 text-white/70 transition-colors duration-300 hover:bg-white/20 hover:text-white"
+                  className="shrink-0 rounded-full bg-black/40 p-2.5 text-white/90 backdrop-blur-md border border-white/10 transition-all duration-300 hover:bg-red-500/80 hover:text-white hover:scale-110"
                   aria-label="Close video player"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
                 </button>
               </div>
-              <div className="bg-black" style={{ aspectRatio: '16 / 9' }}>
-                {activeVideoSlide.videoUrl && activeVideoSlide.videoUrl.includes("drive.google.com") ? (
-                  <iframe
-                    title={`${activeVideoSlide.title} video`}
-                    src={getDrivePreviewUrl(activeVideoSlide.videoUrl)}
-                    className="h-full w-full"
-                    allow="autoplay; encrypted-media; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                  />
-                ) : (
-                  <video
-                    title={`${activeVideoSlide.title} video`}
-                    src={activeVideoSlide.videoUrl}
-                    controls
-                    autoPlay
-                    className="h-full w-full object-contain"
-                  />
-                )}
+
+              <div className="flex flex-col h-full max-h-[85vh]">
+                <div className="bg-black/80 flex-1 relative flex items-center justify-center" style={{ aspectRatio: '16 / 9' }}>
+                  {activeVideoSlide.videoUrl && activeVideoSlide.videoUrl.includes("drive.google.com") ? (
+                    <iframe
+                      title={`${activeVideoSlide.title} video`}
+                      src={getDrivePreviewUrl(activeVideoSlide.videoUrl)}
+                      className="absolute inset-0 h-full w-full border-0"
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  ) : (
+                    <video
+                      title={`${activeVideoSlide.title} video`}
+                      src={activeVideoSlide.videoUrl}
+                      controls
+                      autoPlay
+                      controlsList="nodownload"
+                      className="absolute inset-0 h-full w-full object-contain bg-black"
+                    />
+                  )}
+                </div>
+                <div
+                  className="bg-background/95 border-t border-white/10 backdrop-blur-lg"
+                  style={{ padding: '24px 32px' }}
+                >
+                  {activeVideoSlide.category && (
+                    <div className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-primary-glow">
+                      {activeVideoSlide.category}
+                    </div>
+                  )}
+                  <h3 className="font-display text-xl font-bold text-white sm:text-2xl lg:text-3xl tracking-tight">
+                    {activeVideoSlide.title}
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
