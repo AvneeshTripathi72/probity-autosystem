@@ -4,187 +4,187 @@ const productVideoSlides = [
   {
     title: "Motor Assembly Line",
     category: "Assembly Line Automation",
-    thumbnail: "/video/project_video_1.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_1.mp4",
   },
   {
     title: "Fully automated Sound House Enclosure System",
     category: "SPM",
-    thumbnail: "/video/project_video_2.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_2.mp4",
   },
   {
     title: "Automated bearing press unit",
     category: "Assembly Line Automation",
-    thumbnail: "/video/project_video_3.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_3.mp4",
   },
   {
     title: "Automated bearing press unit (Fast)",
     category: "Assembly Line Automation",
-    thumbnail: "/video/project_video_4.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/project_video_4.mp4",
   },
   {
     title: "Assembly Line Automation with MES Software Integration",
     category: "Assembly Line Automation",
-    thumbnail: "/product-videos/thumb_1.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/video1.mp4",
   },
   {
     title: "Friction Feeder (SPM)",
     category: "SPM",
-    thumbnail: "/product-videos/img10.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1ZLkMCPAuIH4TTQDH5-6V2tlm2Q8OZpKX/view",
   },
   {
     title: "Robotic Pick & Place Automation Cell",
     category: "Robotics Machine tending",
-    thumbnail: "/image1.png",
+    thumbnail: "/images/image1.png",
     videoUrl: null,
   },
   {
     title: "Robotic Welding Cell",
     category: "Robotics Machine tending",
-    thumbnail: "/welding_cell.png",
+    thumbnail: "/images/welding_cell.png",
     videoUrl: null,
   },
   {
     title: "Robotic Palletizing System",
     category: "Robotics Machine tending",
-    thumbnail: "/palletizer.png",
+    thumbnail: "/images/palletizer.png",
     videoUrl: null,
   },
   {
     title: "Robotic Gripper & Component Handling",
     category: "Robotics Machine tending",
-    thumbnail: "/gripper.png",
+    thumbnail: "/images/gripper.png",
     videoUrl: null,
   },
   {
     title: "Sintered Parts Powder Press",
     category: "Robotics Machine tending",
-    thumbnail: "/product-videos/img27.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1BRR2OncdZUoBkoGw8wbzVeldyifzy1fM/view",
   },
   {
     title: "Auto Box Stepping with Shrink Machine",
     category: "Assembly Line Automation",
-    thumbnail: "/product-videos/img34.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1OrJ0KZ24NYVuVtLAVlgB_GLPde5yQk30/view",
   },
   {
     title: "Rear Line Seat Checking ODS Unit",
     category: "SPM",
-    thumbnail: "/product-videos/img37.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1aCM_P2iymcZu18OnmDYbNLkLay_ZNDuV/view",
   },
   {
     title: "Robot Sound box",
     category: "SPM",
-    thumbnail: "/product-videos/img44.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1S-URxa85xeYFBOOulbxb_rTVqe5pIB94/view",
   },
   {
     title: "Automated Conveyor Sorting Line",
     category: "Material Handling & Gantry",
-    thumbnail: "/conveyor_robot.png",
+    thumbnail: "/images/conveyor_robot.png",
     videoUrl: null,
   },
   {
     title: "Bearing Loader Unloader Lifter",
     category: "Material Handling & Gantry",
-    thumbnail: "/product-videos/img48.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1p-J2OecsY7FQlTN-gHFi0H9UgkO3fr_F/view",
   },
   {
     title: "Carrot Type Conveyor",
     category: "Assembly Line Automation",
-    thumbnail: "/product-videos/img52.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1zHmNKaF9zGLSBGUmBYzoWC49Zj-uMEOb/view",
   },
   {
     title: "Shrink Wrapping Unit",
     category: "Assembly Line Automation",
-    thumbnail: "/product-videos/img56.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/14AEfu20Wb4DdnmtbxaRGNxUvqAq8Nm_D/view",
   },
   {
     title: "Bucket Elevator Conveyor",
     category: "Material Handling & Gantry",
-    thumbnail: "/product-videos/img60.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1GlmtVlBN-fDNM6JQGCs279BigQdYuGN1/view",
   },
   {
     title: "Aging set up unit for battery and invertor testing",
     category: "SPM",
-    thumbnail: "/product-videos/img64.jpg",
+    thumbnail: "/images/.",
     videoUrl: null,
   },
   {
     title: "Scara robot integration",
     category: "Robotics Machine tending",
-    thumbnail: "/product-videos/img72.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1AHkonU0QVMu01KC8dAobU-Ycl4QsCIEs/view",
   },
   {
     title: "Manipulator for battery Lifting",
     category: "Material Handling & Gantry",
-    thumbnail: "/product-videos/img76.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1z3yGLrAw2T6Tn4eASdXIh2-bt9_Fg75U/view",
   },
   {
     title: "Haircrack bearing rejection unit",
     category: "SPM",
-    thumbnail: "/product-videos/img80.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1blQ9PSMq63uNEvKpTF3SLUcOMcIICdKJ/view",
   },
   {
     title: "Manipulator",
     category: "Material Handling & Gantry",
-    thumbnail: "/product-videos/img84.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1fycsh6nDfaGMoArCckIoHw-Jrz0K5OOY/view",
   },
   {
     title: "Battery Pack Conveyor",
     category: "",
-    thumbnail: "/product-videos/img88.jpg",
+    thumbnail: "/images/.",
     videoUrl: null,
   },
   {
     title: "SIERRA AIR CONNECTOR",
     category: "Traceability & Data System",
-    thumbnail: "/product-videos/img93.jpg",
+    thumbnail: "/images/.",
     videoUrl: null,
   },
   {
     title: "Armrest Assembly Line",
     category: "Assembly Line Automation",
-    thumbnail: "/product-videos/thumb_2.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://pub-0035a50eaf1046efa85b6e5d1631f721.r2.dev/videos/video2.mp4",
   },
   {
     title: "J4U Headrest Assembly Line",
     category: "Assembly Line Automation",
-    thumbnail: "/product-videos/thumb_3.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1dsrZMDW0Uj_UzVofHOAoCcOn5Lbb-ZxP/view",
   },
   {
     title: "Motorized Gluing Machine",
     category: "Gluing & Spraying Automation",
-    thumbnail: "/product-videos/img111.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1BHkflY0M5lQeM_GsHzy7ZX4u1XHl-qPf/view",
   },
   {
     title: "J4U Armrest Assembly Line",
     category: "Assembly Line Automation",
-    thumbnail: "/product-videos/img116.jpg",
+    thumbnail: "/images/.",
     videoUrl: null,
   },
   {
     title: "TMR Machine",
     category: "Material Mixing & Handling equipment",
-    thumbnail: "/product-videos/img120.jpg",
+    thumbnail: "/images/.",
     videoUrl: "https://drive.google.com/file/d/1NHhE-Fl-_NMwHGy4YN5NM7lRWa_3FUnj/view",
   },
 ];
@@ -243,7 +243,7 @@ const productImageGroups = (() => {
     const categoryLabel = category?.trim() || "Other Projects";
     const image = {
       id: `product-gallery-${index + 1}`,
-      src: thumbnail.replace("/product-videos/", "/product-gallery/"),
+      src: thumbnail,
       alt: `${title} product image`,
       title,
       category: categoryLabel,
@@ -275,31 +275,31 @@ const heroSlides = [
     heading: "MULTIMODEL SEAT ASSEMBLY LINE",
     subheading: "End To End Traceability",
     detail: "SBRS Testing",
-    image: "/herosection/hero1.jpeg",
+    image: "/images/.",
   },
   {
     heading: "ULTRASONIC WELDING CELL",
     subheading: "Robotic Application",
     detail: "Clamping Fixtures",
-    image: "/herosection/hero2.jpeg",
+    image: "/images/.",
   },
   {
     heading: "ROBOTIC PALLETIZING SYSTEM",
     subheading: "Material Handling",
     detail: "Automated Stacking & Dispatch",
-    image: "/herosection/hero3.jpeg",
+    image: "/images/.",
   },
   {
     heading: "ROBOTIC PICK & PLACE CELL",
     subheading: "Machine Tending",
     detail: "High-Speed Component Handling",
-    image: "/herosection/hero4.jpeg",
+    image: "/images/.",
   },
   {
     heading: "AUTOMATED CONVEYOR SORTING LINE",
     subheading: "Material Handling & Gantry",
     detail: "High Performance Routing",
-    image: "/herosection/hero1.jpeg",
+    image: "/images/.",
   },
 ];
 
@@ -583,7 +583,7 @@ export default function App() {
             <a href="#top" className="group flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg">
                 <img
-                  src="/logo.jpeg"
+                  src="/images/logo.jpeg"
                   alt="Probity Autosystem Pvt Ltd Logo"
                   className="h-full w-full object-contain"
                 />
@@ -4068,7 +4068,7 @@ export default function App() {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
             <div className="group flex cursor-default items-center gap-2">
               <div className="flex h-7 w-7 items-center justify-center overflow-hidden">
-                <img src="/logo.jpeg" alt="Probity Autosystem Pvt Ltd" className="h-full w-full object-contain" />
+                <img src="/images/logo.jpeg" alt="Probity Autosystem Pvt Ltd" className="h-full w-full object-contain" />
               </div>
               <span className="transition-colors duration-300 group-hover:text-foreground">
                 © 2025 Probity Autosystem Pvt Ltd.
